@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=DM+Serif+Display&display=swap');
+:root{
+    /* --primary-text: #546975; */
+    --primary-text: #86b7d3;
+    --secondary-text: white;
+    --primary-btn: rgba(255, 68, 0, 0.918);
+    --secondary-btn: rgba(128, 128, 128, 0.89);
+
+    --primary-bodycolor: rgba(128, 128, 128, 0.89);
+    /* --backgroundcolor-main: rgba(245, 222, 179, 0.315); */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hero,footer{
+    background: linear-gradient(-45deg, #112D4E, #DBE2EF, #112D4E, pink);
+	background-size: 400% 400%;
+	animation: gradient 25s ease infinite;
+	height: 100vh;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.primary-color-span{
+    color: var(--primary-text);
+}
+
+.hero{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.hero .title-text-h1{
+    font-size: 2.5rem;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary-text);
+    letter-spacing: 0.3rem;
+}
+
+.hero .content-text{
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.6rem;
+    color: var(--secondary-text); 
+    letter-spacing: 0.13rem;
+}
+
+.hero .hero-button{
+    display: flex;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.hero .hero-button button{
+    border: none;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.1rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+}
+
+.hero .hero-button button a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero .hero-button-mywork{
+    background-color: var(--primary-text);
+}
+
+.hero-button-mywork:hover{
+    box-shadow: 2px 2px 4px gray;
+}
+
+.hero-button-download:hover{
+    box-shadow: 2px 2px 4px var(--primary-text);
+}
+
+/* hero ends here  */
+
+.about-me{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.about-me .title-text-h2{
+    font-size: 2rem;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+}
+
+.about-me .content-text{
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+}
+
+/* about-me end here  */
+
+.skills{
+    height: 350px;
+    width: 90%;
+    display: grid;
+    grid-template-rows: 100px 200px;
+    grid-template-columns: 1fr 1fr 1fr;  
+    grid-template-areas: "myskills myskills myskills"
+                         "education experience skills";
+    column-gap: 0.2rem;
+    justify-self: center;
+    align-content: center;
+    margin-bottom: 40px;
+}
+
+.skills .myskills-text{
+    grid-area: myskills;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 0.1rem;
+}
+
+.skills .Education-text{
+    grid-area: education;
+}
+
+.skills .Experience-text{
+    grid-area: experience;
+}
+
+.skills .skills-text{
+    grid-area: skills;
+}
+
+.myskills-text > .title-text-skills{
+    font-size: 2rem;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+}
+
+.skills h2{
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    justify-self: center;
+    padding-top: 0.2rem;
+}
+
+.skills .skills-card-para{
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    justify-self: center;
+    padding: 0.1rem;
+    line-height: 1.1rem;
+    /* padding-top: 0.2rem; */
+}
+
+.skills .title-text-h2{
+    padding-bottom: 0.5rem;
+} 
+
+.skills-text-cont{
+    border: 1px solid rgba(128, 128, 128, 0.404);
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 5px 1px 2px black;
+}
+
+.skills-text-cont:hover{
+    box-shadow: 6px 5px 4px var(--primary-text);
+    transition: 0.5s;
+}
+
+/* skills section ends here  */
+
+/* .projects{
+    height: 300px;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "myproj myproj"
+                         "img1 img2"
+                         "img3 img4";
+    gap: 0.5rem;
+    margin-bottom: 5rem;
+} */
+
+.projects{
+    height: 300px;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "myproj"
+                         "img1"
+                         "img2"
+                         "img3"
+                         "img4";
+    gap: 0.5rem;
+    padding: 1rem 2rem; 
+    margin-bottom: 58rem;
+}
+
+
+.projects > .title-text-h2{
+    grid-area: myproj;
+    text-align: center;
+    font-size: 1.9rem;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+}
+
+.one{
+    grid-area: img1;
+}
+
+.two{
+    grid-area: img2;
+}
+
+.three{
+    grid-area: img3;
+}
+
+.four{
+    grid-area: img4;
+}
+
+.projects > .image-myprojects,img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.projects > .image-myprojects{
+    box-shadow: 5px 2px 2px black;
+}
+
+.projects > .image-myprojects:hover{
+    box-shadow: 6px 5px 4px var(--primary-text);
+    transition: 0.5s;
+}
+
+/* my projects ends here  */
+footer{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer > p{
+    font-size: 0.6rem;
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    justify-self: center;
+    padding: 0.1rem;
+    line-height: 1.1rem;
+}
+
+[href="#hero"],[href="#about"],[href="./public/contact me.html"]{
+    text-decoration: none;
+    color: inherit;
+}
+
+[href="#hero"]:hover,[href="#about"]:hover,[href="./public/contact me.html"]:hover{
+    opacity: 0.8;
+    text-shadow: 1px 1px 5px gray;
+    transition: 0.5s;
+}
+
+/* footer ends here   */
+
+@media (min-width: 579px) {
+    .hero .title-text-h1{
+        font-size: 7rem;
+    }
+
+    .hero .content-text{
+        font-size: 1.5rem;
+    }
+
+    .hero .hero-button button{
+        font-size: 1.3rem;
+    }
+
+
+
+    .about-me{
+        height: 500px;
+    }
+
+    .about-me .title-text-h2{
+        font-size: 5rem; 
+    }
+
+    .about-me .content-text{
+        font-size: 1.8rem;
+        padding: 1rem 5rem;
+    }
+
+    .skills{
+        height: 500px;
+        margin-bottom: 2rem;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+    }
+
+    .projects{
+        height: 500px;
+    }
+
+    .myskills-text > .title-text-skills{
+        font-size: 5rem;
+    }
+
+    .skills h2{
+        font-size: 1.8rem;
+    }
+
+    .skills .skills-card-para{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .projects{
+        height: 500px;
+        grid-template-rows: 0.1fr 2fr 2fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "myproj myproj"
+                             "img1 img2"
+                             "img3 img4";
+        padding: 10rem;
+        gap: 2rem;
+        margin-bottom: 40rem;
+    }
+
+    .projects > .title-text-h2{
+        font-size: 5rem;   
+    }
+
+    .projects > .image-myprojects,img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+    footer{
+        height: 200px;
+    }
+
+    footer > p{
+        font-size: 1.6rem;
+        color: white;
+    }
+
+    .one{
+        grid-area: img1;
+    }
+    
+    .two{
+        grid-area: img2;
+    }
+    
+    .three{
+        grid-area: img3;
+    }
+    
+    .four{
+        grid-area: img4;
+    }
+    
+    .projects > .image-myprojects,img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+
+}
